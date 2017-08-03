@@ -1,7 +1,7 @@
 # This file must be used with "source bin/activate" *from bash*
 # you cannot run it directly
 
-export SLACK_BOT_TOKEN='xoxb-220384230609-ut6LXEzmhTq3TtHAWvTL0BWa'
+export SLACK_BOT_TOKEN='xoxb-220384230609-Pgca3xA4CclE8ii8nDqaDwUs'
 export BOT_ID='U6GBA6SHX'
 
 deactivate () {
