@@ -1,1 +1,1 @@
-resttest.py https://uat.snapask.co snapaskUAT.yaml --import_extensions 'snapaskExtension' > ./log.txt 2>&1
+/usr/local/bin/resttest.py https://uat.snapask.co snapaskUAT.yaml --import_extensions 'snapaskExtension' > ./log.txt 2>&1
