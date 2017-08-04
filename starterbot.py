@@ -30,12 +30,19 @@ def handle_command(command, channel):
         bashCommand = "./uatapitest.sh || true"
         subprocess.check_output(['bash','-c', bashCommand])       
         f = open('log.txt', 'r')
-        log = f.read()
+        newf = open('Slack.msg', 'w')
+        log = f.readlines()
         f.close()
-        log = log.replace("[91m", "")
-        log = log.replace("[92m", "")
-        log = log.replace("[0m", "")
-        response = "```" + log + "```"
+        for line in log:
+            if 'testsuite SUCCEEDED' in line or 'testsuite FAILED' in line:
+                line = line.replace("[91m", ":x:")
+                line = line.replace("[92m", ":white_check_mark:")
+                line = line.replace("[0m", "")
+                newf.write(line)
+        
+        newf = open('Slack.msg', 'r')            
+        response = newf.read()
+        
     slack_client.api_call("chat.postMessage", channel=channel, text=response, as_user=True)
 
 
