@@ -7,7 +7,7 @@ https://github.com/svanoort/pyresttest
 
 2. Pull code to local machine (Builder)
 
-3. Slack API token is saved in local machine where as /Users/twserver/Desktop/startbot.sh, check this link about bot token info:
+3. Slack API token is saved in local machine where as /Users/twserver/Development/backup/startbot.sh, check this link about bot token info:
 
 https://amazing-snapask.slack.com/services/220384228881?updated=1
 
